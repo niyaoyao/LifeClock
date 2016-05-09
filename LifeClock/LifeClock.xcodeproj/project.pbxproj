@@ -14,7 +14,11 @@
 		8C2C5B701CE0A263004262CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2C5B6E1CE0A263004262CD /* LaunchScreen.storyboard */; };
 		8C2C5B7B1CE0A264004262CD /* LifeClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C5B7A1CE0A264004262CD /* LifeClockTests.swift */; };
 		8C2C5B861CE0A264004262CD /* LifeClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C5B851CE0A264004262CD /* LifeClockUITests.swift */; };
-		8C2C5B941CE0A2FF004262CD /* ClockDialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C5B931CE0A2FF004262CD /* ClockDialView.swift */; };
+		8C2C5B961CE0AE0A004262CD /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C5B951CE0AE0A004262CD /* Clock.swift */; };
+		8C2C5B9A1CE0AF58004262CD /* HourHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C5B991CE0AF58004262CD /* HourHand.swift */; };
+		8C2C5B9C1CE0AF89004262CD /* Dial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C5B9B1CE0AF89004262CD /* Dial.swift */; };
+		8C2C5B9E1CE0B14A004262CD /* MinuteHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C5B9D1CE0B14A004262CD /* MinuteHand.swift */; };
+		8C2C5BA01CE0B1DE004262CD /* SecondHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C5B9F1CE0B1DE004262CD /* SecondHand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +52,11 @@
 		8C2C5B811CE0A264004262CD /* LifeClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2C5B851CE0A264004262CD /* LifeClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeClockUITests.swift; sourceTree = "<group>"; };
 		8C2C5B871CE0A264004262CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8C2C5B931CE0A2FF004262CD /* ClockDialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockDialView.swift; sourceTree = "<group>"; };
+		8C2C5B951CE0AE0A004262CD /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		8C2C5B991CE0AF58004262CD /* HourHand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourHand.swift; sourceTree = "<group>"; };
+		8C2C5B9B1CE0AF89004262CD /* Dial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dial.swift; sourceTree = "<group>"; };
+		8C2C5B9D1CE0B14A004262CD /* MinuteHand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinuteHand.swift; sourceTree = "<group>"; };
+		8C2C5B9F1CE0B1DE004262CD /* SecondHand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondHand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +113,11 @@
 				8C2C5B6C1CE0A263004262CD /* Assets.xcassets */,
 				8C2C5B6E1CE0A263004262CD /* LaunchScreen.storyboard */,
 				8C2C5B711CE0A263004262CD /* Info.plist */,
-				8C2C5B931CE0A2FF004262CD /* ClockDialView.swift */,
+				8C2C5B951CE0AE0A004262CD /* Clock.swift */,
+				8C2C5B991CE0AF58004262CD /* HourHand.swift */,
+				8C2C5B9B1CE0AF89004262CD /* Dial.swift */,
+				8C2C5B9D1CE0B14A004262CD /* MinuteHand.swift */,
+				8C2C5B9F1CE0B1DE004262CD /* SecondHand.swift */,
 			);
 			path = LifeClock;
 			sourceTree = "<group>";
@@ -260,8 +272,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C2C5BA01CE0B1DE004262CD /* SecondHand.swift in Sources */,
+				8C2C5B961CE0AE0A004262CD /* Clock.swift in Sources */,
+				8C2C5B9A1CE0AF58004262CD /* HourHand.swift in Sources */,
+				8C2C5B9E1CE0B14A004262CD /* MinuteHand.swift in Sources */,
+				8C2C5B9C1CE0AF89004262CD /* Dial.swift in Sources */,
 				8C2C5B681CE0A263004262CD /* ViewController.swift in Sources */,
-				8C2C5B941CE0A2FF004262CD /* ClockDialView.swift in Sources */,
 				8C2C5B661CE0A263004262CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
