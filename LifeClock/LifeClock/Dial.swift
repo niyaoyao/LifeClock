@@ -10,12 +10,10 @@ import UIKit
 
 class Dial: Clock {
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
-        // Drawing code
+        let context = UIGraphicsGetCurrentContext()
+        CGContextSetStrokeColorWithColor(context, UIColor.blackColor().CGColor)
+        CGContextStrokeEllipseInRect(context, self.bounds)
     }
-    */
 
 }

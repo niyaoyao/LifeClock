@@ -10,12 +10,16 @@ import UIKit
 
 class SecondHand: Clock {
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
-        // Drawing code
+        let context = UIGraphicsGetCurrentContext()
+        CGContextSetStrokeColorWithColor(context, UIColor.redColor().CGColor)
+        CGContextSetLineWidth(context, 1)
+        let startX = self.bounds.size.width/2.0
+        let startY = self.bounds.size.height/2.0
+        let endX = startX
+        let endY = CGFloat(5.0)
+        CGContextMoveToPoint(context, startX, startY)
+        CGContextAddLineToPoint(context, endX, endY)
+        CGContextStrokePath(context)
     }
-    */
-
 }

@@ -10,9 +10,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var hourHand:HourHand! = nil
+    var secondHand:SecondHand! = nil
+    var minuteHand:MinuteHand! = nil
+    let kClockWidth = CGFloat(300.0)
+    let kClockY = CGFloat(80)
+    var timer:NSTimer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let rect = CGRectMake((view.bounds.size.width - kClockWidth)/2.0, kClockY,
+                              kClockWidth, kClockWidth)
+        let dial = Dial(frame: rect)
+
+        hourHand = HourHand(frame: rect)
+        secondHand = SecondHand(frame: rect)
+        minuteHand = MinuteHand(frame: rect)
+
+        view.addSubview(dial)
+        view.addSubview(hourHand)
+        view.addSubview(minuteHand)
+        view.addSubview(secondHand)
+        tick()
+    
+        timer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(1), target: self, selector:#selector(ViewController.tick), userInfo: nil, repeats: true)
+        timer.fire()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,5 +43,19 @@ class ViewController: UIViewController {
     }
 
 
+    func tick() {
+        let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+        let hour = calendar!.component(NSCalendarUnit.Hour, fromDate: NSDate())
+        let minute = calendar!.component(NSCalendarUnit.Minute, fromDate: NSDate())
+        let second = calendar!.component(NSCalendarUnit.Second, fromDate: NSDate())
+        
+        let hourAngle = CGFloat((Double(hour) / 12.0) * M_PI * 2.0)
+        let minuteAngle = CGFloat((Double(minute) / 60.0) * M_PI * 2.0)
+        let secondAngle = CGFloat((Double(second) / 60.0) * M_PI * 2.0)
+        
+        hourHand.transform = CGAffineTransformMakeRotation(hourAngle)
+        minuteHand.transform = CGAffineTransformMakeRotation(minuteAngle)
+        secondHand.transform = CGAffineTransformMakeRotation(secondAngle)
+    }
 }
 
