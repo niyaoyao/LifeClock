@@ -1,5 +1,5 @@
 //
-//  ClockDialView.swift
+//  Clock.swift
 //  LifeClock
 //
 //  Created by NiYao on 5/9/16.
@@ -8,18 +8,15 @@
 
 import UIKit
 
-class ClockDialView: UIView {
+class Clock: UIView {
 
-    init(frame: CGRect, backgroundColor: UIColor) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        self.backgroundColor = UIColor.clearColor()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    override func drawRect(rect: CGRect) {
-        
-    }
-    
+
 }
