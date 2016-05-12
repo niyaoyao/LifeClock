@@ -17,7 +17,7 @@ class MinuteHand: Clock {
         let startX = self.bounds.size.width/2.0
         let startY = self.bounds.size.height/2.0
         let endX = startX
-        let endY = CGFloat(5.0)
+        let endY = CGFloat(25.0)
         CGContextMoveToPoint(context, startX, startY)
         CGContextAddLineToPoint(context, endX, endY)
         CGContextStrokePath(context)
