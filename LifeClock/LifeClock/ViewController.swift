@@ -27,13 +27,13 @@ class ViewController: UIViewController {
         secondHand = SecondHand(frame: rect)
         minuteHand = MinuteHand(frame: rect)
 
-        view.addSubview(dial)
         view.addSubview(hourHand)
         view.addSubview(minuteHand)
         view.addSubview(secondHand)
+        view.addSubview(dial)
         tick()
     
-        timer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(1), target: self, selector:#selector(ViewController.tick), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(1.0), target: self, selector:#selector(ViewController.tick), userInfo: nil, repeats: true)
         timer.fire()
     }
 
@@ -42,14 +42,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
     func tick() {
         let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
         let hour = calendar!.component(NSCalendarUnit.Hour, fromDate: NSDate())
         let minute = calendar!.component(NSCalendarUnit.Minute, fromDate: NSDate())
         let second = calendar!.component(NSCalendarUnit.Second, fromDate: NSDate())
         
-        let hourAngle = CGFloat((Double(hour) / 12.0) * M_PI * 2.0)
+        let hourAngle = CGFloat(Double(hour) / 12.0 * M_PI * 2.0) + CGFloat(Double(minute) / 60.0 * ( M_PI / 6.0 ))
         let minuteAngle = CGFloat((Double(minute) / 60.0) * M_PI * 2.0)
         let secondAngle = CGFloat((Double(second) / 60.0) * M_PI * 2.0)
         
@@ -57,5 +56,6 @@ class ViewController: UIViewController {
         minuteHand.transform = CGAffineTransformMakeRotation(minuteAngle)
         secondHand.transform = CGAffineTransformMakeRotation(secondAngle)
     }
+    
 }
 
