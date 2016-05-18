@@ -429,6 +429,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sune.bear.nycode.LifeClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -443,6 +444,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sune.bear.nycode.LifeClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -511,6 +513,7 @@
 				8C2C5B8C1CE0A264004262CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C2C5B8D1CE0A264004262CD /* Build configuration list for PBXNativeTarget "LifeClockTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +522,7 @@
 				8C2C5B8F1CE0A264004262CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C2C5B901CE0A264004262CD /* Build configuration list for PBXNativeTarget "LifeClockUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +531,7 @@
 				8C2C5B921CE0A264004262CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
